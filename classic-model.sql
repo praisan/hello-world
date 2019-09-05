@@ -1,7 +1,7 @@
 
 /*Table structure for table ofice */
 
-DROP TABLE office;
+DROP TABLE IF EXISTS office;
 
 CREATE TABLE office (
   officeCode varchar(10) NOT NULL,
@@ -29,7 +29,7 @@ insert  into office(officeCode,city,phone,addressLine1,addressLine2,state,countr
 
 /*Table structure for table employees */
 
-DROP TABLE employee;
+DROP TABLE IF EXISTS employee;
 
 CREATE TABLE employee (
   employeeNumber int NOT NULL,
@@ -75,7 +75,7 @@ insert  into employee(employeeNumber,lastName,firstName,extension,email,officeCo
 (1702,'Gerard','Martin','x2312','mgerard@classicmodelcars.com','4',1102,'Sales Rep');
 
 
-DROP TABLE customer;
+DROP TABLE IF EXISTS customer;
 
 CREATE TABLE customer (
   customerNumber int NOT NULL,
@@ -223,7 +223,7 @@ insert  into customer(customerNumber,customerName,contactLastName,contactFirstNa
 
 /*Table structure for table productline */
 
-DROP TABLE productline;
+DROP TABLE IF EXISTS productline;
 
 CREATE TABLE productline (
   productLine varchar(50) NOT NULL,
@@ -247,7 +247,7 @@ insert  into productline(productLine,textDescription,htmlDescription,image) valu
 
 /*Table structure for table product */
 
-DROP TABLE  product;
+DROP TABLE  IF EXISTS product;
 
 CREATE TABLE product (
   productCode varchar(15) NOT NULL,
@@ -379,7 +379,7 @@ insert  into product(productCode,productName,productLine,productScale,productVen
 
 
 
-DROP TABLE orders;
+DROP TABLE IF EXISTS orders;
 
 CREATE TABLE orders (
   orderNumber int NOT NULL,
@@ -725,7 +725,7 @@ insert  into orders(orderNumber,orderDate,requiredDate,shippedDate,status,commen
 
 /*Table structure for table orderdetails */
 
-DROP TABLE orderdetail;
+DROP TABLE IF EXISTS orderdetail;
 
 CREATE TABLE orderdetail (
   orderNumber int NOT NULL,
@@ -3749,7 +3749,7 @@ insert  into orderdetail (orderNumber,productCode,quantityOrdered,priceEach,orde
 
 /*Table structure for table payment */
 
-DROP TABLE payment;
+DROP TABLE IF EXISTS payment;
 
 CREATE TABLE payment (
   customerNumber int NOT NULL,
